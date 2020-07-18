@@ -1,0 +1,10 @@
+li {
+    list-style: none;
+}
+
+.box {
+    width: 200px;
+    height: 300px;
+    background: url('../imgs/city1.jpg');
+    background-size: cover;
+}

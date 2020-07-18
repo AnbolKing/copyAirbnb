@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./lib/vue.js"></script>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <script src="https://cdn.bootcss.com/vue-router/3.1.3/vue-router.js"></script>
+    <title>Document</title>
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <router-link to="/login">登录</router-link>
+        <router-link to="/register">组件</router-link>
+        <router-view></router-view>
+    </div>
+
+
+
+    <script>
+        var login = {
+            template: '<h1>这是登录LOGIN</h1>',
+        }
+
+        var register = {
+            template: '<h1>这是注册REGISTER组件</h1>'
+        }
+
+        var routerObj = new VueRouter({
+            routes: [{
+                path: '/login',
+                component: login
+            }, {
+                path: '/register',
+                component: register
+            }, {
+                path: '/',
+                redirect: "/login",
+            }],
+            linkActiveClass: 'myactive',
+
+        })
+        var vm = new Vue({
+            el: '#app',
+            data: {},
+            methods: {},
+            components: {},
+            router: routerObj,
+        })
+    </script>
+</body>
+
+</html>

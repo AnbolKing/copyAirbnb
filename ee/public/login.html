@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script text="text/jaavascript" src="https://lib.sinaapp.com/js/jquery/2.0.2/jquery-2.0.2.min.js"></script>
+    <script text="text/jaavascript">
+        $(function() {
+            $(".btn").click(function() {
+                var obj = {
+                    username: $("#name").val(),
+                    userpd: $("#pd").val()
+                }
+                $.ajax({
+                    type: 'delete',
+                    url: "http://localhost:3000/login",
+                    contentType: 'application/json',
+                    dataType: 'text',
+                    // data: $('form:eq(0)').serialize(),
+                    data: JSON.stringify(obj),
+                    success: function(data) {
+                        console.log(data);
+                    }
+                });
+            });
+        });
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        用户名：<input type="text" name="username" id="name"><br> 密码： <input type="password" name="userpd" id="pd"><br>
+        <input type="button" value="提交" class="btn"><br>
+    </form>
+</body>
+
+</html>

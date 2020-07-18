@@ -1,0 +1,30 @@
+.title {
+    font-weight: bold;
+    font-size: 23px;
+    /* 水平居中 */
+    text-align: center;
+    background-color: lightgreen;
+    height: 70px;
+    /* 垂直居中 */
+    line-height: 70px;
+}
+
+.content {
+    background-color: lightblue;
+}
+
+.content table {
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    width: 100%;
+    text-align: center;
+}
+
+.content td,
+th {
+    font-size: 18px;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    height: 50px;
+    line-height: 40px;
+}

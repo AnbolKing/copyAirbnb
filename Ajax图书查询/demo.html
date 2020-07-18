@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>图书信息查询实验</title>
+		<script src="./data.js"></script>
+		<script src="jquery-3.4.1.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			window.onload = function(){
+				var btn = document.getElementById("btn");
+				btn.onclick = function(){
+					var book = document.getElementById("book").value;
+					var parme = 'book='+book; 
+					$.ajax({
+						type:'post',
+						url:'http://wang.com/data/demo.php',
+						data:{book:book},
+						dataType:'jsonp',
+						success:function(datas){
+							var info = document.getElementById("info");
+							if(datas.flag == 0){
+								info.innerHTML = "暂无此书！";
+							}
+							else{
+								var tag = "<ul><li>书名："+datas.name+"</li><li>作者："+datas.author+"</li><li>类型："+datas.type+"</li><li>价格："+datas.price+"</li></ul>";
+								document.getElementById("info").innerHTML = tag;
+							}
+						},
+						error:function(){
+							console.log("无法获取数据");
+						}
+					});
+					// ajax('get','./demo.php',parme,'json',function(datas){
+					// 	var info = document.getElementById("info");
+					// 	if(datas.flag == 0){
+					// 		info.innerHTML = "暂无此书！";
+					// 	}
+					// 	else{
+					// 		var tag = "<ul><li>书名："+datas.name+"</li><li>作者："+datas.author+"</li><li>类型："+datas.type+"</li><li>价格："+datas.price+"</li></ul>";
+					// 		document.getElementById("info").innerHTML = tag;
+					// 	}
+					// });
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" name="book" id="book" placeholder="请输入图书编号"/>
+		<input type="button" name="seek" id="btn" value="查询" />
+		<div id="info"></div>
+	</body>
+</html>

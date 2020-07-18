@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Demo</title>
+		<script src="jquery-3.4.1.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#btnAll").click(function() {
+					$("input[type='checkbox']").prop("checked",true);
+				});
+				$("#btnNone").click(function() {
+					$("input[type='checkbox']").prop("checked",false);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<input type="button"  id="btnAll" value="全选" />
+		<input type="button"  id="btnNone" value="全不选" />
+		<div id="dv">
+			<input type="checkbox"  id="ck" value="1" />吃饭
+			<input type="checkbox"  id="ck" value="2" />睡觉
+			<input type="checkbox"  id="ck" value="3" />喝水
+			<input type="checkbox"  id="ck" value="4" />散步
+			<input type="checkbox"  id="ck" value="5" />运动
+		</div>
+	</body>
+
+</html>

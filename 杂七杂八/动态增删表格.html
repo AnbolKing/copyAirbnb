@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>动态表格处理</title>
+	</head>
+	<style type="text/css">
+		#add {
+			margin-top: 300px;
+			margin-left: 1100px;
+			width: 150px;
+			height: 50px;
+			font-size: 20px;
+		}
+		table {
+			border: 1px solid #000000;
+			font-size: 20px;
+			padding-top:30px;
+			padding-bottom: 30px;
+			margin-top: 30px;
+			margin-left: 700px;
+			border-collapse: collapse;
+		}
+		.texcel tr {
+			border: 1px solid #000000;
+		}
+		.texcel td {
+			border: 1px solid #000000;
+			text-align: center;
+			height: 30px;
+		}
+		.texcel th {
+			border: 1px solid #000000;
+			width: 250px;
+			height: 50px;
+		}
+		#j_mask {
+			background-color: gray;
+			opacity: 0.5;
+			position: absolute;
+			top:0;
+			left:0;
+			width: 100%;
+			height: 100%;
+			display: none;
+		}
+		#j_formAdd {
+			font-size: 25px;
+			width: 700px;
+			height: 400px;
+			background: aliceblue;
+			border: 1px solid #000000;
+			position: relative;
+			margin-top: 10px;
+			left: 50%;
+			margin-left: -350px; 
+			display: none;
+		}
+		.logo {
+			float: left;
+			font-weight: 600;
+		}
+		#delete {
+			margin-left: 680px;
+		}
+		.lesson-item {
+			position: absolute;
+			top:100px;
+			left: 200px;
+		}
+		.school-item {
+			position: absolute;
+			top:200px;
+			left: 200px;
+		}
+		.grade-item {
+			position: absolute;
+			top:300px;
+			left: 200px;
+		}
+		#addbutton {
+			position: absolute;
+			top:360px;
+			left: 300px;
+		}
+	</style>
+	<script src="jquery-3.4.1.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			//点击按钮，显示遮挡层和对话框
+			$("#add").click(function() {
+				$("#j_mask").css("display","block");
+				$("#j_formAdd").css("display","block");
+			});
+			//关闭
+			$("#delete").click(function() {
+				$("#j_mask").css("display","none");
+				$("#j_formAdd").css("display","none");
+			});
+			//添加内容
+			$("#addbutton").click(function() {
+				//获取输入内容
+				var lesson = $("#add_lesson").val();
+				var school = $("#add_school").val();
+				var grade = $("#add_grade").val();
+				var exam;
+				if(grade<60){
+					exam = "需要";
+				}
+				else{
+					exam = "不需要"
+				}
+				$("<tr><td>"+lesson+"</td><td>"+school+"</td><td>"+grade+"</td><td><a href='javascript:void(0)' class='exam'>"+exam+"</a></td><tr/>").appendTo($("#t_body"));
+				//隐藏
+				$("#j_mask").css("display","none");
+				$("#j_formAdd").css("display","none");
+				$("#add_lesson").val("");
+				$("#add_school").val("");
+				$("#add_grade").val("");
+			});
+			$("#t_body").on("click",".exam",function() {
+				 var obj = $(this).parent().prev().text();
+				if(obj>60)
+					$(this).parent().parent().remove();
+				if(obj<60){
+					alert("该课程成绩不及格，需要等待补考！");
+				}
+			});
+		});
+	</script>
+	<body>
+		<input type="button" id="add" value="添加数据" /><br/>
+		<table class="texcel">
+			<thead id="thead">
+				<tr>
+					<th>课程名称</th>
+					<th>所属学院</th>
+					<th>得分情况</th>
+					<th>补考情况</th>
+				</tr>
+			</thead>
+			<tbody id="t_body">
+				<tr>
+					<td>数据结构</td>
+					<td>信息工程学院</td>
+					<td>92</td>
+					<td><a href="javascript:void(0)" class="exam">不需要</td>
+				</tr>
+			</tbody>
+		</table>
+		<div id="j_mask"></div>
+		<div id="j_formAdd">
+			<div class="addTop">
+				<span class="logo">添加数据</span>
+				<div id="delete">X</div>
+			</div>
+			<div class="lesson-item">
+				<label class="lb" for="add_lesson">课程名称</label>&nbsp;&nbsp;
+				<input type="text" id="add_lesson" placeholder="如：Web程序设计" />
+			</div><br/>
+			<div class="school-item">
+				<label class="lb" for="add_school">学院名称</label>&nbsp;&nbsp;
+				<input type="text" id="add_school" placeholder="如：信息工程学院"/>
+			</div>
+			<div class="grade-item">
+				<label class="lb" for="add_grade">课程成绩</label>&nbsp;&nbsp;
+				<input type="text" id="add_grade" placeholder="请输入0-100之间的数字"/>
+			</div>
+			<input type="button" id="addbutton" value="添加"/>
+		</div>
+	</body>
+</html>

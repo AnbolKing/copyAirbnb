@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>动态显示时间</title>
+		<style type="text/css">
+			h3 {
+				font-family: "microsoft yahei";
+				font-size:35px;
+				color: blue;
+			}
+			span#timeOut {
+				font-size: 30px;
+				font-family: "microsoft yahei";
+				font-weight: 600;
+				color: #000000;
+			}
+			div {
+				border-style: solid;
+				margin-top: 400px;
+			}
+			h3 {
+				margin-left:1550px;
+			}
+		</style>
+		<script type="text/javascript">
+			var week = ['天','一','二','三','四','五','六'];
+			window.onload = function() {
+				dt = document.getElementById("timeOut");
+				getTime();
+				setInterval("getTime()",1000);
+			}
+			function getTime() {
+				var time = new Date();
+				var year = time.getFullYear();
+				var month = time.getMonth() + 1;
+				var data = time.getDate();
+				var hour = time.getHours();
+				var min = time.getMinutes();
+				var sec = time.getSeconds();
+				var day = time.getDay();
+				if(month<10)
+					month = "0"+month;
+				if(data<10)
+					day = "0"+day;
+				if(hour<10)
+					hour = "0"+hour;
+				if(min<10)
+					min = "0"+min;
+				if(sec<10)
+					sec = "0"+sec;
+				var str = year+' 年 '+month+' 月 '+data+' 日 '+hour+':'+min+':'+sec+' 星期'+week[day]+' .';
+				dt.innerHTML = str;
+			}
+		</script>
+	</head>
+	<body>
+		<div><h3>当前时间是：<span id="timeOut"></span></h3></div>
+	</body>
+</html>

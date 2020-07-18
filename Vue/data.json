@@ -1,0 +1,43 @@
+[{
+        "id": 1,
+        "name": "三国演义",
+        "author": "罗贯中",
+        "category": "古典文学",
+        "desc": "一个杀伐纷争地年代"
+    },
+    {
+        "id": 2,
+        "name": "哈利波特",
+        "author": "JK.罗琳",
+        "category": "儿童文学",
+        "desc": "带你走进鲜为人知的魔法世界"
+    },
+    {
+        "name": "JavaScript高级程序语言设计",
+        "author": "Web前端工程师",
+        "category": "计算机类",
+        "desc": "讲述了JavaScript的很多用法",
+        "id": 3
+    },
+    {
+        "name": "悲惨世界",
+        "author": "雨果",
+        "category": "欧洲古典文学",
+        "desc": "一个很悲惨很伤感的故事",
+        "id": 4
+    },
+    {
+        "name": "明朝那些事",
+        "author": "当年明月",
+        "category": "现代文学",
+        "desc": "讲述明朝的历史，脍炙人口",
+        "id": 5
+    },
+    {
+        "name": "五年高考三年模拟",
+        "author": "江西高校出版社",
+        "category": "高中辅导书",
+        "desc": "圆梦清华，助力北大",
+        "id": 6
+    }
+]

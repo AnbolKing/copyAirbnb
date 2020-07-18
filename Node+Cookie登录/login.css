@@ -1,0 +1,69 @@
+.content {
+	padding: 0 auto;
+	margin: 0 auto;
+	height: 450px;
+	width: 100%;
+	background-color: lightgray;
+	margin-top: 25px;
+}
+.login_in {
+	position: absolute;
+	width: 320px;
+	height: 300px;
+	left: 50%;
+	margin-left: -160px;
+	border-radius: 10%;
+	-webkit-border-radius: 10px;
+	-moz-birder-radius:10px;
+	margin-top: 75px;
+	background-color: slategray;
+}
+.login_in h3 {
+	color: #fff;
+	font-size: 18px;
+	text-align: center;
+}
+.userName,.userPassword {
+	border: 1px soild white;
+	width: 230px;
+	height: 40px;
+	margin-left: 45px;
+	margin-bottom: 20px;
+}
+.remember_box {
+	margin-left: 43px;
+	color: white;
+	font-size: 15px;
+	font-weight: bold;
+}
+.btn input {
+	height: 40px;
+	width: 120px;
+	float: left;
+	margin-right: 25px;
+	border: none;
+	color: #fff;
+	font-size: 16px;
+	-webkit-border-radius: 10px;
+	-moz-birder-radius:10px;
+	border-radius: 10px;
+	margin-top: 10px;
+	cursor: pointer;
+}
+input:active {
+	border-color: #147a62;
+}
+.submit {
+	background: #ea8c37;
+}
+.reset {
+	background: #bbb;
+}
+.message {
+	color: #ea8c27;
+	font-size: 14px;
+	padding-left: 40px;
+	padding-top: 10px;
+	clear: both;
+	font-weight: bold;
+}

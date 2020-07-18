@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- 引入文件样式 -->
+	<link rel="stylesheet" type="text/css" href="./wjs_header.css"/>
+  </head>
+  <body>
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+	
+	<!-- 头部快 -->
+	<header class="wjs_header hidden-xs hidden-sm">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-2">
+					<a href="javascript:;" class="wjs_code">
+						<span class="glyphicon glyphicon-phone"></span>
+						<span>手机微金所</span>
+						<span class="glyphicon glyphicon-menu-down"></span>
+						<img src="images/code.png" width="100px" height="100px" style="z-index: 999;">
+					</a>
+				</div>
+				<div class="col-md-5">
+					<span class="glyphicon glyphicon-earphone"></span>
+					<a href="javascript:;">123-123-123(工作时间：9.00~12.00)</a>&nbsp;&nbsp;
+					<a href="javascript:;">联系在线客服</a>
+				</div>
+				<div class="col-md-2">
+					<a href="javascript:;">常见问题</a>&nbsp;&nbsp;
+					<a href="javascript:;">财富登录</a>
+				</div>
+				<div class="col-md-3">
+					<button type="button" class="btn btn-danger">免费注册</button>				
+					<button type="button" class="btn btn-link">登录</button>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- 导航条 -->
+	<nav class="navbar navbar-default wjs_nav" style="margin-bottom: 0;">
+	  <div class="container">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="#">微金所</a>
+	    </div>
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav hidden-sm">
+	        <li class="active"><a href="#">我要投资 <span class="sr-only">(current)</span></a></li>
+	        <li><a href="#">我要借贷</a></li>
+			<li><a href="#">平台介绍</a></li>
+			<li><a href="#">新手专区</a></li>
+			<li><a href="#">最新动态</a></li>
+			<li><a href="#">微平台</a></li>
+	      </ul>
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><a href="#">个人中心</a></li>
+	      </ul>
+	    </div>
+	  </div>
+	</nav>
+	<!-- 轮播图 -->
+	<div class="wjs_banner">
+		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+		  <!-- Indicators 自动轮播设置设置，通过索引-->
+		  <ol class="carousel-indicators">
+		    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+		    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+		    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+			<li data-target="#carousel-example-generic" data-slide-to="3"></li>
+		  </ol>
+		
+		  <!-- Wrapper for slides 存放图片内容和图片说明 -->
+		  <div class="carousel-inner" role="listbox">
+		    <div class="item active" pcimg='./images/1.jpg' mobimg='./images/code.png'>
+		      <div class="carousel-caption"></div>
+		    </div>
+		    <div class="item" pcimg='./images/2.jpg' mobimg='./images/code.png'>
+		      <div class="carousel-caption"></div>
+		    </div>
+			<div class="item" pcimg='./images/3.jpg' mobimg='./images/code.png'>
+			  <div class="carousel-caption"></div>
+			</div>
+			<div class="item" pcimg='./images/4.jpg' mobimg='./images/code.png'>
+			  <div class="carousel-caption"></div>
+			</div>
+		  </div>
+		
+		  <!-- Controls 对向左向右的按钮进行控制设置-->
+		  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+		    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+		    <span class="sr-only">Previous</span>
+		  </a>
+		  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+		    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+		    <span class="sr-only">Next</span>
+		  </a>
+		</div>
+	</div>
+	<!-- 信息块 -->
+	<div class="wjs_info hidden-xs">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-md-4">
+					<a href="javascript:;">
+						<div class="media">
+						  <span class="logo media-left glyphicon glyphicon-euro"></span>
+						  <div class="media-body">
+						    <h4 class="media-heading">支持交易保障</h4>
+						    <p>欢迎给钱给王子安王子安谢谢你全家</p>
+						  </div>
+						</div>
+					</a>
+				</div>
+				<div class="col-sm-6 col-md-4">
+					<a href="javascript:;">
+						<div class="media">
+						  <span class="logo media-left glyphicon glyphicon-euro"></span>
+						  <div class="media-body">
+						    <h4 class="media-heading">支持交易保障</h4>
+						    <p>欢迎给钱给王子安王子安谢谢你全家</p>
+						  </div>
+						</div>
+					</a>
+				</div>
+				<div class="col-sm-6 col-md-4">
+					<a href="javascript:;">
+						<div class="media">
+						  <span class="logo media-left glyphicon glyphicon-euro"></span>
+						  <div class="media-body">
+						    <h4 class="media-heading">支持交易保障</h4>
+						    <p>欢迎给钱给王子安王子安谢谢你全家</p>
+						  </div>
+						</div>
+					</a>
+				</div>
+				<div class="col-sm-6 col-md-4">
+					<a href="javascript:;">
+						<div class="media">
+						  <span class="logo media-left glyphicon glyphicon-euro"></span>
+						  <div class="media-body">
+						    <h4 class="media-heading">支持交易保障</h4>
+						    <p>欢迎给钱给王子安王子安谢谢你全家</p>
+						  </div>
+						</div>
+					</a>
+				</div>
+				<div class="col-sm-6 col-md-4">
+					<a href="javascript:;">
+						<div class="media">
+						  <span class="logo media-left glyphicon glyphicon-euro"></span>
+						  <div class="media-body">
+						    <h4 class="media-heading">支持交易保障</h4>
+						    <p>欢迎给钱给王子安王子安谢谢你全家</p>
+						  </div>
+						</div>
+					</a>
+				</div>
+				<div class="col-sm-6 col-md-4">
+					<a href="javascript:;">
+						<div class="media">
+						  <span class="logo media-left glyphicon glyphicon-euro"></span>
+						  <div class="media-body">
+						    <h4 class="media-heading">支持交易保障</h4>
+						    <p>欢迎给钱给王子安王子安谢谢你全家</p>
+						  </div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 预约块 -->
+	<div class="wjs_reverse hidden-xs hidden-sm">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-9">
+					<span class=" logo glyphicon glyphicon-dashboard">现在的272人在排队，累计预约交易成功7571次</span>
+					<a href="javascript:;">什么叫预约投标</a>
+					<a href="javascript:;" class="now">立即预约</a>
+				</div>
+				<div class="col-sm-3">
+					<span class="glyphicon glyphicon-expand"></span>
+					<a href="javascript:;">微金所企业宣传片</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 产品块 -->
+	<div class="wjs_product">
+		<div class="container">
+			<div>
+			  <!-- Nav tabs -->
+			  <div class="tab_nav">
+			  	<ul class="nav nav-tabs" role="tablist">
+			  	  <li role="presentation" class="active"><a href="#p1" aria-controls="p1" role="tab" data-toggle="tab">特别推荐</a></li>
+			  	  <li role="presentation"><a href="#p2" aria-controls="p2" role="tab" data-toggle="tab">微投资</a></li>
+			  	  <li role="presentation"><a href="#p3" aria-controls="p3" role="tab" data-toggle="tab">微小宝</a></li>
+			  	  <li role="presentation"><a href="#p4" aria-controls="p4" role="tab" data-toggle="tab">月月盈</a></li>
+			  	  <li role="presentation"><a href="#p5" aria-controls="p5" role="tab" data-toggle="tab">稳赢宝</a></li>
+			      <li role="presentation"><a href="#p6" aria-controls="p6" role="tab" data-toggle="tab">海航通宝</a></li>
+			  	  <li role="presentation"><a href="#p7" aria-controls="p7" role="tab" data-toggle="tab">微金宝</a></li>
+			  	</ul>
+			  </div>
+			  <!-- Tab panes -->
+			  <div class="tab-content">
+			    <div role="tabpanel" class="tab-pane active" id="p1">
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-12 col-sm-6 col-md-4">
+								<div class="wjs_proBox active">
+									<div class="wjs_pBorL">
+										<p>新手体验1002期</p>
+										<!-- 列嵌套 -->
+										<div class="row">
+											<div class="col-xs-6">
+												<p>起投金额(元)</p>
+												<p>0.01万</p>
+											</div>
+											<div class="col-xs-6">
+												<p>起投金额(元)</p>
+												<p>0.02万</p>
+											</div>
+											<div class="col-xs-6">
+												<p>起投金额(元)</p>
+												<p>0.03万</p>
+											</div>
+											<div class="col-xs-6">
+												<p>起投金额(元)</p>
+												<p>0.04万</p>
+											</div>
+										</div>
+									</div>
+									<div class="wjs_pBorR">
+										<b>8</b>
+										<sub>%</sub>
+										<p>年利率</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-4">
+								<div class="wjs_proBox ">
+									<div class="wjs_pBorL">
+										<p>新手体验1002期</p>
+										<!-- 列嵌套 -->
+										<div class="row">
+											<div class="col-xs-6">
+												<p>起投金额(元)</p>
+												<p>0.01万</p>
+											</div>
+											<div class="col-xs-6">
+												<p>起投金额(元)</p>
+												<p>0.02万</p>
+											</div>
+											<div class="col-xs-6">
+												<p>起投金额(元)</p>
+												<p>0.03万</p>
+											</div>
+											<div class="col-xs-6">
+												<p>起投金额(元)</p>
+												<p>0.04万</p>
+											</div>
+										</div>
+									</div>
+									<div class="wjs_pBorR">
+										<div class="wjs_tip">
+											<!-- <span>宝</span> -->
+											<span type="button" data-toggle="tooltip" data-placement="top" title="微金宝">宝</span>
+											<!-- <span>北</span> -->
+											<span type="button" data-toggle="tooltip" data-placement="top" title="北京市">北</span>
+										</div>
+										<b>8</b>
+										<sub>%</sub>
+										<p>年利率</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-4">
+								<div class="wjs_proBox ">
+									<div class="wjs_pBorL">
+										<p>新手体验1002期</p>
+										<!-- 列嵌套 -->
+										<div class="row">
+											<div class="col-xs-6">
+												<p>起投金额(元)</p>
+												<p>0.01万</p>
+											</div>
+											<div class="col-xs-6">
+												<p>起投金额(元)</p>
+												<p>0.02万</p>
+											</div>
+											<div class="col-xs-6">
+												<p>起投金额(元)</p>
+												<p>0.03万</p>
+											</div>
+											<div class="col-xs-6">
+												<p>起投金额(元)</p>
+												<p>0.04万</p>
+											</div>
+										</div>
+									</div>
+									<div class="wjs_pBorR">
+										<b>8</b>
+										<sub>%</sub>
+										<p>年利率</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-4">
+								<div class="wjs_proBox ">
+									<div class="wjs_pBorL">
+										<p>新手体验1002期</p>
+										<!-- 列嵌套 -->
+										<div class="row">
+											<div class="col-xs-6">
+												<p>起投金额(元)</p>
+												<p>0.01万</p>
+											</div>
+											<div class="col-xs-6">
+												<p>起投金额(元)</p>
+												<p>0.02万</p>
+											</div>
+											<div class="col-xs-6">
+												<p>起投金额(元)</p>
+												<p>0.03万</p>
+											</div>
+											<div class="col-xs-6">
+												<p>起投金额(元)</p>
+												<p>0.04万</p>
+											</div>
+										</div>
+									</div>
+									<div class="wjs_pBorR">
+										<b>8</b>
+										<sub>%</sub>
+										<p>年利率</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			    <div role="tabpanel" class="tab-pane" id="p2">2</div>
+			    <div role="tabpanel" class="tab-pane" id="p3">3</div>
+			    <div role="tabpanel" class="tab-pane" id="p4">4</div>
+				<div role="tabpanel" class="tab-pane" id="p5">5</div>
+				<div role="tabpanel" class="tab-pane" id="p6">6</div>
+				<div role="tabpanel" class="tab-pane" id="p7">7</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<!-- 新闻块 -->
+	<div class="wjs_news">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-2 col-md-offset-2">
+					<h3 class="wjs_newsTitle">全部新闻</h3>
+				</div>
+				<div class="col-md-1">
+					<div class="line hidden-xs hidden-sm"></div>
+					<ul class="nav nav-tabs" role="tablist">
+					    <li role="presentation" class="active"><a href="#1" aria-controls="home" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-cog logo"></span></a></li>
+					    <li role="presentation"><a href="#2" aria-controls="profile" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-home logo"></span></a></li>
+					    <li role="presentation"><a href="#3" aria-controls="messages" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-time logo"></span></a></li>
+					    <li role="presentation"><a href="#4" aria-controls="settings" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-book logo"></span></a></li>
+					  </ul>
+				</div>
+				<div class="col-md-7">
+					<div class="tab-content">
+					    <div role="tabpanel" class="tab-pane active" id="1">1</div>
+					    <div role="tabpanel" class="tab-pane" id="2">2</div>
+					    <div role="tabpanel" class="tab-pane" id="3">3</div>
+					    <div role="tabpanel" class="tab-pane" id="4">4</div>
+					  </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 合作伙伴 -->
+	<footer class="wjs_partner"></footer>
+  </body>
+  <script src="../jquery-3.4.1.js"></script>
+  <script src="https://cdn.bootcss.com/iScroll/5.2.0/iscroll-infinite.js"></script>
+  <script type="text/javascript">
+  	$(function() {
+		// 功能：自动轮播
+  		$(window).on("resize",function(){
+  			var items = $(".carousel-inner .item");
+  			var width = $(window).width();
+  			if(width>=768){
+  				$(items).each(function(index,value){
+  					var imgSrc = $(this).attr("pcimg");
+  					//console.log(imgSrc);
+					var _a = $("<a href='javascript:;' class='pcPhoto'></a>").css("background-image","url("+imgSrc+")")
+  					$(this).html(_a);
+  				});
+  			}
+  			else{
+				$(items).each(function(index,value){
+					var imgSrc = $(this).attr("mobimg");
+					//console.log(imgSrc);
+					$(this).html("<a href='javascript:;' class='mobPhoto'><img src='"+imgSrc+"' alt='...'></a>");
+				});
+  			}
+  		}).trigger("resize");
+		//功能：产品导航条轮播
+		var ul = $(".wjs_product .nav-tabs");
+		var lis = ul.find("li");
+		var tolwidth = 0;
+		lis.each(function(index,value) {
+			//讲解：width()方法只能获得盒子本身大小无法获得padding这种距离;
+			//     而innerwidth是可以获得padding+盒子本身的大小的却无法获得margin;
+			//     outerWidth可以获得元素内容宽度+padding+border
+			//     outerWidth(true)可以获得元素内容宽度+padding+border+margin，即所有的可能距离；
+			tolwidth = tolwidth + $(value).innerWidth();
+		})
+		ul.width(tolwidth);
+		var myScroll = new IScroll('.tab_nav',{
+			scrollX:true,scrollY:false
+		});
+  	});
+  </script>
+</html>
+
+
+
+

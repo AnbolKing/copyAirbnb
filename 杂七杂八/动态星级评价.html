@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Demo</title>
+		<style type="text/css">
+			ul>li {
+				color: yellow;
+				font-size: 100px;
+				float: left;
+				list-style: none;
+				width: 100px;
+			}
+		</style>
+		<script src="jquery-3.4.1.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#comments>li").mouseover(function() {
+					$(this).text("★").prevAll("li").text("★");
+					$(this).nextAll("li").text("☆");
+				});
+				$("#comments>li").click(function() {
+					$(this).addClass("active").siblings().removeClass("active");
+				});
+				$("#comments>li").mouseout(function() {
+					$("#comments").find("li").text("☆");
+					$(".active").text("★").prevAll("li").text("★");
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<ul id="comments">
+			<li>☆</li>
+			<li>☆</li>
+			<li>☆</li>
+			<li>☆</li>
+			<li>☆</li>
+		</ul>
+	</body>
+</html>
